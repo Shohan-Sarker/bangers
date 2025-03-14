@@ -1,0 +1,9 @@
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>Bangers</ShortName>
+  <Description>Search Bangers</Description>
+  <Url type="text/html" template="https://bangers.shohansarker.com?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://bangers.shohansarker.com/opensearch.xml"/>
+  <Image height="16" width="16" type="image/x-icon">https://bangers.shohansarker.com/favicon.svg</Image>
+  <InputEncoding>UTF-8</InputEncoding>
+  <OutputEncoding>UTF-8</OutputEncoding>
+</OpenSearchDescription>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangers</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        @media (prefers-color-scheme: light) {
+            body {
+                background-color: #ffffff;
+                color: #000000;
+            }
+        }
+
+        a {
+            color: rgb(61, 166, 187);
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        /* Hide content initially and fade in after 2 seconds */
+        .content {
+            opacity: 0;
+            animation: fadeIn 0.1s 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p>You should have been redirected to the homepage automatically.<br>
+            <a href="https://bangers.shohansarker.com/bangers">Click here to go to homepage manually</a>
+        </p>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="./javascript/bang-search.js"></script>
+    <script>
+        (function() {
+            const params = new URLSearchParams(window.location.search);
+            if (!params.get('q')?.trim()) {
+                window.location.replace("https://bangers.shohansarker.com/bangers.html");
+            }
+        })();
+    </script>
+</body>
+</html>
